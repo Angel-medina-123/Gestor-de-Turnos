@@ -1,1 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gestor de Turnos Administrativos</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              christmas: {
+                red: '#7f1d1d',   /* Darker Red (Red-900 equivalent) */
+                green: '#14532d', /* Darker Green (Green-900 equivalent) */
+                gold: '#B45309',  /* Darker Gold/Amber */
+                cream: '#FEF3C7'  /* Amber-100 for contrast */
+              }
+            },
+            animation: {
+              'fall': 'fall 10s linear infinite',
+            },
+            keyframes: {
+              fall: {
+                '0%': { transform: 'translateY(-10%) translateX(-10px)' },
+                '100%': { transform: 'translateY(110%) translateX(10px)' },
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      /* Custom scrollbar for cleaner look */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      ::-webkit-scrollbar-thumb {
+        background-color: #cbd5e1;
+        border-radius: 20px;
+      }
+      .dark ::-webkit-scrollbar-thumb {
+        background-color: #475569;
+      }
 
+      /* Snow Effect */
+      .snowflake {
+        position: fixed;
+        top: -10px;
+        color: white;
+        font-size: 1em;
+        font-family: Arial, sans-serif;
+        text-shadow: 0 0 5px #000;
+        z-index: 9999;
+        pointer-events: none;
+        animation-name: fall;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+      }
+      
+      .snowflake:nth-of-type(0) { left: 1%; animation-duration: 10s; animation-delay: 0s; }
+      .snowflake:nth-of-type(1) { left: 10%; animation-duration: 10s; animation-delay: 1s; }
+      .snowflake:nth-of-type(2) { left: 20%; animation-duration: 12s; animation-delay: 6s; }
+      .snowflake:nth-of-type(3) { left: 30%; animation-duration: 11s; animation-delay: 4s; }
+      .snowflake:nth-of-type(4) { left: 40%; animation-duration: 13s; animation-delay: 2s; }
+      .snowflake:nth-of-type(5) { left: 50%; animation-duration: 14s; animation-delay: 8s; }
+      .snowflake:nth-of-type(6) { left: 60%; animation-duration: 12s; animation-delay: 6s; }
+      .snowflake:nth-of-type(7) { left: 70%; animation-duration: 15s; animation-delay: 2.5s; }
+      .snowflake:nth-of-type(8) { left: 80%; animation-duration: 11s; animation-delay: 1s; }
+      .snowflake:nth-of-type(9) { left: 90%; animation-duration: 13s; animation-delay: 3s; }
+    </style>
+
+<link rel="stylesheet" href="/index.css">
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.554.0",
+    "react-router-dom": "https://aistudiocdn.com/react-router-dom@^7.9.6",
+    "vite": "https://aistudiocdn.com/vite@^7.2.4",
+    "@vitejs/plugin-react": "https://aistudiocdn.com/@vitejs/plugin-react@^5.1.1",
+    "@netlify/blobs": "https://aistudiocdn.com/@netlify/blobs@^10.4.2"
+  }
+}
+</script>
+  <script type="module" crossorigin src="./assets/index-CTJifYfD.js"></script>
+</head>
+  <body class="bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-300">
+    <div id="root"></div>
+</body>
+</html>
